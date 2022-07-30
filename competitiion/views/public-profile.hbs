@@ -1,0 +1,63 @@
+<div style="width:100%; border:1px solid black; font-size: 20px; background-color:#161B22; border-radius: 20px ">
+  {{> messages }}
+  {{#if username}}
+
+  <br />
+  <h2 style="margin-left:2%; font-weight:bold; color: rgba(255, 255, 255, 0.5);">{{ username }}'s
+    profile</h2>
+
+  <table class="table"
+    style="width:95%;  font-size: 20px;  margin-left:auto; margin-right:auto; color: rgba(255, 255, 255, 0.35); border-color: transparent; ">
+
+    <tr>
+      <td style="border-top: 1px solid transparent; border-bottom: 1px solid rgba(255, 255, 255, 0.35)">Firstname:</td>
+      <td style="border-top: 1px solid transparent; border-bottom: 1px solid rgba(255, 255, 255, 0.35)">{{ firstname }}
+      </td>
+    </tr>
+    <tr>
+      <td style="border-top: 1px solid transparent; border-bottom: 1px solid rgba(255, 255, 255, 0.35)">Lastname:</td>
+      <td style="border-top: 1px solid transparent; border-bottom: 1px solid rgba(255, 255, 255, 0.35)">{{ lastname }}
+      </td>
+    </tr>
+    <tr>
+      <td style="border-top: 1px solid transparent; border-bottom: 1px solid rgba(255, 255, 255, 0.35)">GitHub:</td>
+      <td style="border-top: 1px solid transparent; border-bottom: 1px solid rgba(255, 255, 255, 0.35)"><a
+          style="color: rgba(255, 255, 255, 0.35)" href="{{ github }}">{{ github }}</a></td>
+    </tr>
+    <tr>
+      <td style="border-top: 1px solid transparent; border-bottom: 1px solid rgba(255, 255, 255, 0.35)">Employment
+        Status:</td>
+      <td style="border-top: 1px solid transparent; border-bottom: 1px solid rgba(255, 255, 255, 0.35)">{{ emstatus }}
+      </td>
+    </tr>
+    <tr>
+      <td style="border-top: 1px solid transparent; border-bottom: 1px solid rgba(255, 255, 255, 0.35)">Email:</td>
+      <td style="border-top: 1px solid transparent; border-bottom: 1px solid rgba(255, 255, 255, 0.35)"><a
+          style="color: rgba(255, 255, 255, 0.35)" href="mailto:{{ email }}">{{ email }}</a></td>
+    </tr>
+    <tr>
+      <td style="border-top: 1px solid transparent; border-bottom: 1px solid rgba(255, 255, 255, 0.35)">Phone Number:
+      </td>
+      <td style="border-top: 1px solid transparent; border-bottom: 1px solid rgba(255, 255, 255, 0.35)"><a
+          style="color: rgba(255, 255, 255, 0.35)" href="tel:{{ phonenumber }}">{{ phonenumber }}</a></td>
+    </tr>
+    <tr>
+      <td style="border-top: 1px solid transparent; border-bottom: 1px solid rgba(255, 255, 255, 0.35)">Time Coding:
+      </td>
+      <td style="border-top: 1px solid transparent; border-bottom: 1px solid rgba(255, 255, 255, 0.35)">
+        <table>
+          <tr>
+            <td style="border: none; padding: 6px; margin: 0;">Hours:</td>
+            <td style="border: none; padding: 10px; margin: 0;">{{ hours }}</td>
+          </tr>
+          <tr>
+            <td style="border-top: 0.5px solid rgba(255, 255, 255, 0.35); padding: 7px; margin: 0;">Minutes:</td>
+            <td style="border-top: 0.5px solid rgba(255, 255, 255, 0.35); padding: 7px; margin: 0;">{{ minutes }}</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+  </table>
+  {{/if}}
+</div>

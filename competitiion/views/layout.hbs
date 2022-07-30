@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{title}}</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href='/stylesheets/nav.css' />
+</head>
+
+<body style="background-color: white">
+  <div class="header header-fixed">
+
+    <div class="navbar container">
+      <div class="logo"><a href="/list">Code Resume</a></div>
+      <input type="checkbox" id="navbar-toggle">
+      <label for="navbar-toggle"><i></i></label>
+      <nav class="menu">
+        <ul>
+
+          {{#loggedIn}}
+          <li><a href="/list">Home</a></li>
+          <li><a href="/users/">Profile</a></li>
+          <li><a href="/auth/logout">Job Offers</a></li>
+          <li><a href="/auth/logout">Logout</a></li>
+          {{/loggedIn}}
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="containerindex">
+
+    <div class="container">
+      {{{body}}}
+    </div>
+  </div>
+</body>
+
+</html>

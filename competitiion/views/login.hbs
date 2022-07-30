@@ -1,0 +1,32 @@
+<div style="background-color:#161B22; border: 1px solid black; border-radius: 20px;">
+  <br/>
+<h2 style="color:rgb(244, 244, 244,0.5); margin-left:2%; font-weight:bold;">Login</h2>
+<br/>
+
+{{> messages }}
+
+<form action="/auth/login" method="POST">
+
+  <div class="form-group" style="width:97%; margin-left:auto; margin-right:auto;">
+    <label for="username" style="color:rgb(244, 244, 244,0.5); font-weight:bold; font-size: 16px;">Username:</label>
+    <input type="text" style="background-color: #323841; color: rgb(244, 244, 244, 0.5); border: 1px solid #323841;" class="form-control" name="username" id="username">
+  </div>
+  <div class="form-group" style="width:97%; margin-left:auto; margin-right:auto;">
+    <label for="password" style="color:rgb(244, 244, 244, 0.5); font-weight:bold; font-size: 16px;">Password:</label>
+    <input type="password" style="background-color: #323841; color: rgb(244, 244, 244, 0.5); border: 1px solid #323841;" class="form-control" name="password" id="password">
+  </div>
+  <div style="text-align: center; ">
+  <button class="btn btn-black" onmouseover="this.style.background='#474d55';" onmouseout="this.style.background='#323841'" style="color:rgb(244, 244, 244, 0.5); background-color: #323841; border-radius: 20px; padding:15px 55px;">Login</button>
+<br/>
+<br/>
+
+
+<a style="color:#4c5057; float:left; margin-left:2%; cursor:pointer;" href="/auth/register">Register an account.</a>
+
+<br/>
+<br/>
+</div>
+</form>
+
+
+</div>

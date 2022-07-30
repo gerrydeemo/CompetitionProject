@@ -1,0 +1,107 @@
+<div style="width:100%; border:1px solid black; font-size: 20px; background-color:#161B22; border-radius: 20px ">
+  <br />
+  <h2 style="margin-left:2%; font-weight:bold; text-align:center; color: rgba(255, 255, 255, 0.5);">Find Your Programmer
+  </h2>
+  <br />
+  <script src="https://code.jquery.com/jquery-1.6.4.js"></script>
+  <script>
+
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput")
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable"); tr =
+        table.getElementsByTagName("tr"); for (i = 0; i < tr.length; i++) {
+          td =
+            tr[i].getElementsByTagName("td")[0]; if (td) {
+              txtValue = td.textContent ||
+                td.innerText; if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  tr[i].style.display = "";
+                } else { tr[i].style.display = "none"; }
+            }
+        }
+
+    }
+    function myFunction2() {
+      var input, filter, table, tr, td, i, txtValue; input
+        = document.getElementById("myInput2"); filter = input.value.toUpperCase();
+      table = document.getElementById("myTable"); tr =
+        table.getElementsByTagName("tr"); for (i = 0; i < tr.length; i++) {
+          td =
+            tr[i].getElementsByTagName("td")[3]; if (td) {
+              txtValue = td.textContent ||
+                td.innerText; if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  tr[i].style.display = "";
+                } else { tr[i].style.display = "none"; }
+            }
+        }
+      var ting = document.getElementById("myInput2");
+      ting.style.display = "none";
+      var ting2 = document.getElementById("myInput3");
+      ting2.style.display = "block";
+    }
+    function myFunction3() {
+      var input, filter, table, tr, td, i, txtValue; input
+        = document.getElementById("myInput3"); filter = input.value.toUpperCase();
+      table = document.getElementById("myTable"); tr =
+        table.getElementsByTagName("tr"); for (i = 0; i < tr.length; i++) {
+          td =
+            tr[i].getElementsByTagName("td")[3]; if (td) {
+              txtValue = td.textContent ||
+                td.innerText; if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  tr[i].style.display = "";
+                } else { tr[i].style.display = "none"; }
+            }
+        }
+      var ting = document.getElementById("myInput3");
+      ting.style.display = "none";
+      var ting2 = document.getElementById("myInput2");
+      ting2.style.display = "block";
+    }
+  </script>
+
+  <div style="width:100%; position: relative; text-align: center;">
+    <p style="color: rgba(255, 255, 255, 0.5); float:right;">Filter by:<input
+        style="background-color:transparent; float:right; outline: none; border:none; color: rgba(255, 255, 255, 0.5); text-decoration:underline; text-align: center;"
+        type="button" id="myInput2" onclick="myFunction2()" value="Unemployed" />
+      <input
+        style="background-color:transparent; float:right; outline: none; border:none; display: none; color: rgba(255, 255, 255, 0.5); text-decoration:underline; text-align: center;"
+        type="button" id="myInput3" onclick="myFunction3()" value="Employed" />
+    </p>
+    <input
+      style="outline: none; background-color: #32384173; border:none; border-radius:10px 0px 0px 10px; padding-left:10px; position: relative; color: rgba(255, 255, 255, 0.5); outline:none; width:65%; padding-top: 1%; padding-bottom:1%;"
+      type="text" id="myInput" onkeyup="myFunction()" placeholder="Search By Username..." title="Type in a name" />
+    <br /><br />
+
+  </div>
+  <br />
+
+  <table id="myTable"
+    style="width:95%;  font-size: 20px;  margin-left:auto; margin-right:auto; color: rgba(255, 255, 255, 0.35); border-color: transparent; "
+    border="1">
+    <tr>
+      <th>Username</th>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Employment</th>
+      <th>Time</th>
+      <th>Repo's</th>
+      <th>Codepen Score</th>
+    </tr>
+
+    {{#each recent}}
+    <tr>
+      <td><a style="color: rgba(255, 255, 255, 0.35);" href="/users/{{username}}">{{username}}</a></td>
+      <td><a style="color: rgba(255, 255, 255, 0.35);" href="/users/{{username}}">{{firstname}}</a></td>
+      <td><a style="color: rgba(255, 255, 255, 0.35);" href="/users/{{username}}">{{lastname}}</a></td>
+      <td><a style="color: rgba(255, 255, 255, 0.35);" href="/users/{{username}}">{{emstatus}}</a></td>
+      <td><a style="color: rgba(255, 255, 255, 0.35);" href="/users/{{username}}">{{hours}}h {{minutes}}m</a></td>
+      <td><a style="color: rgba(255, 255, 255, 0.35);" href="/users/{{username}}">{{repos}}</a></td>
+      <td><a style="color: rgba(255, 255, 255, 0.35);" href="/users/{{username}}">{{Codescore}}</a></td>
+      {{/each}}
+  </table>
+  <br />
+  <br />
+  <br />
+
+</div>

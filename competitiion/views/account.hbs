@@ -1,0 +1,84 @@
+<script>
+  function myFunction() {
+    window.location.href = 'https://marketplace.visualstudio.com/items?itemName=CodePursuit.codetimer'
+
+  }
+</script>
+
+<br />
+
+<div style="background-color:#161B22; border: 1px solid black; border-radius: 20px;">
+  <br />
+  <p><a style="color:#404349; margin-right:2%; float:right" href="/users/{{username}}" target="_blank">View your
+      profile</a></p>
+  <h3 style="color:rgb(244, 244, 244, 0.5); margin-left:2%; font-weight:bold;">Edit your profile</h3>
+  <br />
+
+
+  <form action="/users" method="POST">
+
+    <div class="form-group" style="width:97%; margin-left:auto; margin-right:auto;">
+      <label for="name" style="color:rgba(244, 244, 244, 0.5); font-weight:bold; font-size: 16px;">Firstname:</label>
+      <input type="text" style="background-color: #323841; color: rgb(244, 244, 244, 0.5); border: 1px solid #323841;"
+        class="form-control" name="firstname" id="firstname" value="{{ firstname }}">
+    </div>
+    <div class="form-group" style="width:97%; margin-left:auto; margin-right:auto;">
+      <label for="name" style="color:rgb(244, 244, 244, 0.5); font-weight:bold; font-size: 16px;">Lastname:</label>
+      <input type="text" style="background-color: #323841; color: rgb(244, 244, 244, 0.5); border: 1px solid #323841;"
+        class="form-control" name="lastname" id="lastname" value="{{ lastname }}">
+    </div>
+    <div class="form-group" style="width:97%; margin-left:auto; margin-right:auto;">
+      <label for="name" style="color:rgb(244, 244, 244, 0.5); font-weight:bold; font-size: 16px;">GitHub:</label>
+      <input type="url" style="background-color: #323841; color: rgb(244, 244, 244, 0.5); border: 1px solid #323841;"
+        class="form-control" name="github" id="github" value="{{ github }}">
+    </div>
+    <div class="form-group" style="width:97%; margin-left:auto; margin-right:auto;">
+      <label for="name" style="color:rgb(244, 244, 244, 0.5); font-weight:bold; font-size: 16px;">Email:</label>
+      <input type="text" style="background-color: #323841; color: rgb(244, 244, 244, 0.5); border: 1px solid #323841;"
+        class="form-control" name="email" id="email" value="{{ email }}">
+    </div>
+    <div class="form-group" style="width:97%; margin-left:auto; margin-right:auto;">
+      <label for="name" style="color:rgb(244, 244, 244, 0.5); font-weight:bold; font-size: 16px;">Employment
+        Status:</label>
+      <select class="form-control"
+        style="background-color: #323841; color: rgb(244, 244, 244, 0.5); border: 1px solid #323841;"
+        value="{{emstatus}}" name="emstatus" id="emstatus">
+        <option selected="{{emstatus}}">Employed</option>
+        <option selected="{{emstatus}}">Unemployed</option>
+      </select>
+    </div>
+
+    <div class="form-group" style="width:97%; margin-left:auto; margin-right:auto;">
+      <label for="name" style="color:rgb(244, 244, 244, 0.5); font-weight:bold; font-size: 16px;">Phone Number:</label>
+      <input type="text" style="background-color: #323841; color: rgb(244, 244, 244, 0.5); border: 1px solid #323841;"
+        class="form-control" name="phonenumber" id="phonenumber" value="{{ phonenumber }}">
+    </div>
+    <a type="submit" value="Submit" onmouseover="this.style.color='#474d55'; this.style.textDecoration='underline';"
+      onmouseout="this.style.color='rgba(255, 255, 255, 0.295)'; this.style.textDecoration='none';"
+      style=" color:rgba(255, 255, 255, 0.295); margin-left:2%;" onclick="myFunction()" id="vscode">Do you need still
+      need to connect with vscode?</a>
+    <br />
+    <div style="text-align:center;">
+      <button class="btn btn-black" onmouseover="this.style.background='#474d55';"
+        onmouseout="this.style.background='#323841'"
+        style="color:rgba(255, 255, 255, 0.5); background-color: #323841; border-radius: 20px; padding:15px 55px; margin-left:1%;">Update</button>
+    </div><br />
+
+    <br />
+
+    <br />
+
+
+
+
+</div>
+
+</form>
+</div>
+
+
+
+
+<br />
+<br />
+<br />
